@@ -31,7 +31,7 @@ pipeline{
    }
    stage('Build & Push Docker image'){
     environment{
-      DOCKER_IMAGE = "sivasuribabu/codtech_task: ${BUILD_NUMBER}"
+      DOCKER_IMAGE = "sivasuribabu/codtech-task: ${BUILD_NUMBER}"
       REGISTRY_CREDENTIALS = credentials('docker-cred')
     }
     steps{
